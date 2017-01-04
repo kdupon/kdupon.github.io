@@ -1,0 +1,12 @@
+{
+  "entry": {
+    "atomic": [
+      "./assets/src/atomic/index.js",
+      "./assets/src/atomic/index.scss"
+    ],
+    "vendor": [
+      "./assets/src/vendor/index.js",
+      "./assets/src/vendor/index.scss"
+    ]
+  }
+}

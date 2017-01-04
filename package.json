@@ -1,0 +1,61 @@
+{
+  "name": "kdupon.github.io",
+  "version": "0.1.0",
+  "description": "Kate Dupon",
+  "main": "index.js",
+  "scripts": {
+    "build": "bundle exec jekyll build && webpack --progress --config webpack/webpack.config.js",
+    "build:prod": "bundle exec jekyll build && webpack --progress -p --config webpack/webpack.config.js",
+    "jekyll-serve": "bundle exec jekyll serve",
+    "start": "parallelshell \"bundle exec jekyll build --watch\" \"webpack --hide-modules --watch --config webpack/webpack.config.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --hide-modules --watch --config webpack/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdupon/kdupon.github.io.git"
+  },
+  "keywords": [
+    "Kate",
+    "Dupon"
+  ],
+  "author": "Joshua L Geschwendt",
+  "contributors": [
+    "Kate Dupon"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kdupon/kdupon.github.io/issues"
+  },
+  "homepage": "https://github.com/kdupon/kdupon.github.io#readme",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "babel-core": "6.21.0",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-stage-0": "6.16.0",
+    "browser-sync": "2.18.5",
+    "browsersync-webpack-plugin": "github:qwp6t/browsersync-webpack-plugin",
+    "clean-webpack-plugin": "0.1.14",
+    "css-loader": "0.25.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "0.9.0",
+    "loader-utils": "0.2.16",
+    "lodash.mergewith": "4.6.0",
+    "minimist": "1.2.0",
+    "monkey-hot-loader": "github:rmarscher/monkey-hot-loader#webpack2-import",
+    "node-sass": "3.11.2",
+    "parallelshell": "2.0.0",
+    "postcss-loader": "1.2.1",
+    "resolve-url-loader": "1.6.0",
+    "sass-loader": "4.0.2",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "2.1.0-beta.26",
+    "webpack-dev-middleware": "1.9.0",
+    "webpack-hot-middleware": "2.14.0"
+  }
+}
