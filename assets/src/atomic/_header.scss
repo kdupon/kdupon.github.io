@@ -1,0 +1,13 @@
+.global-header {
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 1.25em 0;
+
+  .svg-target {
+    text-align: center;
+
+    svg {
+      height: 2em;
+    }
+  }
+}

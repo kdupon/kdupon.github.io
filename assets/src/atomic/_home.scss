@@ -1,38 +1,14 @@
 .home {
-}
+  background-color: #f8f8f8;
 
-/*Typography*/
+  ul {
+    list-style-type: none;
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.375em;
-  color: #000;
-}
-
-p {
-  font-family: 'Lato Light', sans-serif;
-  font-size: 1em;
-  color: #000;
-}
-
-/*Form*/
-label {
-  font-family: 'Playfair Display', serif;
-  font-size: 1em;
-  color: #000;
-}
-
-input {
-  background-color: #FFF;
-  border: none;
-  font-family: 'Lato Light', sans-serif;
-  font-size: 0.875em;
-  color: #999;
-}
-
-.btn {
-  background-color: #000;
-  color: #FFF;
-  font-family: 'Playfair Display', serif;
-  text-transform: uppercase;
+    a {
+      &::before {
+        content: '+';
+        margin-right: .5em;
+      }
+    }
+  }
 }

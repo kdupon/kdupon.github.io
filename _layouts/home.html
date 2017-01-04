@@ -1,34 +1,38 @@
 ---
 layout: base
 ---
-<div class="home container">
-  <h1>Let's connect</h1>
-  <p>I’d love to discuss how I can put my knowledge to work for your project needs.</p>
-
+<main class="home container-fluid">
+  <div class="container py-3">
+    <h1>Let's connect</h1>
+    <p>I’d love to discuss how I can put my knowledge to work for your project needs.</p>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-9 clearfix mb-2">
         <div class="form-group row">
-          <label for="input" class="col-xs-2 col-form-label">Name</label>
-          <div class="col-xs-10">
-            <input class="form-control" type="text" value="Enter name" id="example-text-input">
+          <label for="connect-name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" id="connect-name">
           </div>
         </div>
+
         <div class="form-group row">
-          <label for="example-text-input" class="col-xs-2 col-form-label">Email</label>
-          <div class="col-xs-10">
-            <input class="form-control" type="text" value="Enter email" id="example-text-input">
+          <label for="contact-email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" id="connect-email">
           </div>
         </div>
+
         <div class="form-group row">
-          <label for="exampleTextarea" class="col-xs-2 col-form-label">Message</label>
-          <div class="col-xs-10">
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          <label for="contact-message" class="col-sm-2 col-form-label">Message</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="contact-message" rows="6"></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-primary float-xs-right">Send</button>
       </div>
-      <div class="col-md-3">
+
+      <div class="col-md-3 mb-2">
         <ul>
           <li><a target="_blank" href="mailto:ktdupon@gmail.com">ktdupon@gmail.com</a></li>
           <li><a href="tel:+16168222374">616.822.2374</a></li>
@@ -37,5 +41,4 @@ layout: base
       </div>
     </div>
   </div>
-
-</div>
+</main>

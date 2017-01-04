@@ -1,0 +1,40 @@
+/*Typography*/
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375em;
+  color: #000;
+}
+
+p {
+  font-weight: 300;
+}
+
+// p {
+//   font-family: 'Lato Light', sans-serif;
+//   font-size: 1em;
+//   color: #000;
+// }
+
+/*Form*/
+label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  color: #000;
+}
+
+input {
+  background-color: #FFF;
+  border: none;
+  font-family: 'Lato Light', sans-serif;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.btn {
+  background-color: #000;
+  color: #FFF;
+  font-family: map-get($font-stack-map, PlayfairDisplay);
+  font-weight: 300;
+  text-transform: uppercase;
+}
