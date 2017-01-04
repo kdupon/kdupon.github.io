@@ -1,2 +1,65 @@
-h1{font-family:Playfair Display,serif;font-size:1.375em;color:#000}p{font-weight:300}label{font-family:Playfair Display,serif;font-size:1em;color:#000}input{background-color:#fff;border:none;font-family:Lato Light,sans-serif;font-size:.875em;color:#999}.btn{background-color:#000;color:#fff;font-family:Playfair Display,serif;font-weight:300;text-transform:uppercase}.global-header{border-bottom:1px solid #ccc;font-size:1rem;padding:1.25em 0}.global-header .svg-target{text-align:center}.global-header .svg-target svg{height:2em}.home{background-color:#f8f8f8}.home ul{list-style-type:none}.home ul a:before{content:"+";margin-right:.5em}
+/*Typography*/
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375em;
+  color: #000;
+}
+
+p {
+  font-weight: 300;
+}
+
+/*Form*/
+
+label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  color: #000;
+}
+
+input {
+  background-color: #FFF;
+  border: none;
+  font-family: 'Lato Light', sans-serif;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.btn {
+  background-color: #000;
+  color: #FFF;
+  font-family: Playfair Display, serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.global-header {
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 1.25em 0;
+}
+
+.global-header .svg-target {
+  text-align: center;
+}
+
+.global-header .svg-target svg {
+  height: 2em;
+}
+
+.home {
+  background-color: #f8f8f8;
+}
+
+.home ul {
+  list-style-type: none;
+}
+
+.home ul a::before {
+  content: '+';
+  margin-right: .5em;
+}
+
+
 /*# sourceMappingURL=atomic.css.map*/
