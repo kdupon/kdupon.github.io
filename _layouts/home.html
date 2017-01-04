@@ -1,24 +1,41 @@
 ---
-layout: default
+layout: base
 ---
+<div class="home container">
+  <h1>Let's connect</h1>
+  <p>I’d love to discuss how I can put my knowledge to work for your project needs.</p>
 
-<div class="home">
-  <h2 class="page-heading">Posts</h2>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="form-group row">
+          <label for="input" class="col-xs-2 col-form-label">Name</label>
+          <div class="col-xs-10">
+            <input class="form-control" type="text" value="Enter name" id="example-text-input">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-2 col-form-label">Email</label>
+          <div class="col-xs-10">
+            <input class="form-control" type="text" value="Enter email" id="example-text-input">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="exampleTextarea" class="col-xs-2 col-form-label">Message</label>
+          <div class="col-xs-10">
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+      <div class="col-md-3">
+        <ul>
+          <li><a target="_blank" href="mailto:ktdupon@gmail.com">ktdupon@gmail.com</a></li>
+          <li><a href="tel:+16168222374">616.822.2374</a></li>
+          <li><a target="_blank"  href="https://www.linkedin.com/in/katedupon">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 </div>
