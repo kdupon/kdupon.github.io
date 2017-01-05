@@ -4,19 +4,6 @@ hr {
   padding-bottom: 25px;
 }
 
-.hero-target {
-  background-color: #f8f8f8;
-  width: 100%;
-}
-
-.hero-outlet {
-  display: block;
-  margin: auto;
-  max-width: 1440px;
-  width: 100%;
-  margin-bottom: 150px;
-}
-
 /*Typography*/
 
 h1 {
@@ -65,4 +52,21 @@ input {
   font-family: map-get($font-stack-map, PlayfairDisplay);
   font-weight: 300;
   text-transform: uppercase;
+}
+
+.toggle {
+  margin-right: .5em;
+}
+
+.resume-collapse {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 400ms ease-out 400ms;
+}
+
+.toggle:checked ~ .resume-collapse {
+  height: auto;
+  opacity: 1;
+  transition: opacity 400ms ease-in 400ms;
 }

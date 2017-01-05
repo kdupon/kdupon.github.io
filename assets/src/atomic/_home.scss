@@ -1,5 +1,4 @@
 .home {
-
   .contact-form {
     background-color: #f8f8f8;
 
@@ -13,5 +12,18 @@
         }
       }
     }  
+  }
+
+  .hero-target {
+    background-color: #f8f8f8;
+    width: 100%;
+  }
+
+  .hero-outlet {
+    display: block;
+    margin: auto;
+    max-width: 1440px;
+    width: 100%;
+    margin-bottom: 150px;
   }
 }
