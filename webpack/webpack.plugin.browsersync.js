@@ -33,7 +33,9 @@ module.exports = class extends EventEmitter {
         change () {}
       },
       publicPath: '/',
-      watch: [],
+      watch: [
+        '_site/**/*.html',
+      ],
     }, options);
     this.registerEvents();
   }
@@ -96,7 +98,7 @@ module.exports = class extends EventEmitter {
   config () {
     this.watcherConfig = merge({
       browser: ['google chrome'],
-      files: [],
+      files: this.options.watch,
       middleware: this.middleware,
       server: {
         baseDir: '_site',
