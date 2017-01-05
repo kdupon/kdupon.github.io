@@ -1,9 +1,37 @@
+/*General*/
+hr {
+  border-top: 1px solid #000;
+  padding-bottom: 25px;
+}
+
+.hero-target {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+.hero-outlet {
+  display: block;
+  margin: auto;
+  max-width: 1440px;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
 /*Typography*/
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 1.375em;
+  line-height: 1.65em;
   color: #000;
+}
+
+h2 {
+  font-family: map-get($font-stack-map, Lato);
+  font-weight: 400;
+  font-size: 1em;
+  color: #000;
+  margin-bottom: 5px;
 }
 
 p {

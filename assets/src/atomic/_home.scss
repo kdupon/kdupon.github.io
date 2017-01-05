@@ -1,14 +1,17 @@
 .home {
-  background-color: #f8f8f8;
 
-  ul {
-    list-style-type: none;
+  .contact-form {
+    background-color: #f8f8f8;
 
-    a {
-      &::before {
-        content: '+';
-        margin-right: .5em;
+    ul {
+      list-style-type: none;
+
+      a {
+        &::before {
+          content: '+';
+          margin-right: .5em;
+        }
       }
-    }
+    }  
   }
 }
