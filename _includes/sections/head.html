@@ -1,4 +1,10 @@
-<link href="//fonts.googleapis.com/css?family=Lato:300,400,900|Playfair+Display" rel="stylesheet">
+<head>
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,900|Playfair+Display" rel="stylesheet">
 
-<link rel="stylesheet" href="/assets/built/css/vendor.css">
-<link rel="stylesheet" href="/assets/built/css/atomic.css">
+  <link rel="stylesheet" href="/assets/built/css/vendor.css">
+  <link rel="stylesheet" href="/assets/built/css/atomic.css">
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include snippets/google-analytics.html %}
+  {% endif %}
+</head>
