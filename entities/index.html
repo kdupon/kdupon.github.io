@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% assign entities = "" | split: "" %}
+  {% for collection in site.collections %}
+    {% for entity in site[collection.label] %}
+      {% assign entities = entities | push: entity %}
+    {% endfor %}
+  {% endfor %}
+{% assign entities = (entities | sort: "date") | reverse %}
+
+<div class="card-columns" style="column-gap: 30px">
+{% for entity in entities %}
+  <div class="card" style="margin-bottom: 30px;">
+    <div class="card-block">
+      <h3 class="card-title">{{ entity.title }}</h3>
+      <h6 class="card-subtitle mb-3 text-muted">{{ entity.date | date: "%m.%d.%y"}} {% for tag in entity.tags %} &middot; {{ tag }} {% endfor %}</h6>
+      <p class="card-text">{{ entity.description }}</p>
+      <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+    </div>
+  </div>
+{% endfor %}
+</div>
