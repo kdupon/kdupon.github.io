@@ -2,6 +2,22 @@
 layout: default
 ---
 
+{% unless page.total_time %}
+  <div class="alert alert-danger" role="alert">
+    <code>oven_temperature</code> is not defined
+  </div>
+{% endunless %}
+{% unless page.servings %}
+  <div class="alert alert-danger" role="alert">
+    <code>oven_temperature</code> is not defined
+  </div>
+{% endunless %}
+{% unless page.skill_level %}
+  <div class="alert alert-danger" role="alert">
+    <code>oven_temperature</code> is not defined
+  </div>
+{% endunless %}
+
 <div class="container">
   <h1>{{ page.title }}</h1>
   <p>{{ page.date | date: "%m.%d.%y"}} {% for tag in page.tags %} &middot; {{ tag }} {% endfor %}</p>
@@ -18,8 +34,10 @@ layout: default
     <span>{{ page.servings }} Servings</span>
     <span>&middot;</span>
     <span>{{ page.skill_level }} Skill Level</span>
+    {% if page.oven_temperature %}
     <span>&middot;</span>
     <span>{{ page.oven_temperature }} &deg; Oven Temperature</span>
+    {% endif %}
   </p>
   <div class="row">
     <div class="col-md-6">
