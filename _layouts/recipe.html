@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="container">
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.date | date: "%m.%d.%y"}} {% for tag in page.tags %} &middot; {{ tag }} {% endfor %}</p>
+
+  <div class="">
+    {{ content }}
+  </div>
+
+  <p>{{ page.description }}</p>
+
+  <p>
+    <span>{{ page.total_time }}</span>
+    <span>&middot;</span>
+    <span>{{ page.servings }} Servings</span>
+    <span>&middot;</span>
+    <span>{{ page.skill_level }} Skill Level</span>
+    <span>&middot;</span>
+    <span>{{ page.oven_temperature }} &deg; Oven Temperature</span>
+  </p>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Ingredients</h3>
+      <ul>
+        {% for ingredient in page.ingredients %}
+        <li>{{ingredient}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3>Instructions</h3>
+      <ol>
+        {% for instruction in page.instructions %}
+        <li>{{instruction}}</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</div>

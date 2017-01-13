@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/kdupon/kdupon.github.io#readme",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.5"
+    "bootstrap": "4.0.0-alpha.6"
   },
   "devDependencies": {
     "babel-core": "6.21.0",

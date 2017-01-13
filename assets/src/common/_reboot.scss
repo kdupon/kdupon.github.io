@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/mixins';
+
 /*General*/
 hr {
   border-top: 1px solid #000;
@@ -11,6 +13,7 @@ h1 {
   font-size: 1.375em;
   line-height: 1.65em;
   color: #000;
+  margin-bottom: 25px;
 }
 
 h2 {
@@ -23,6 +26,10 @@ h2 {
 
 p {
   font-weight: 300;
+}
+
+li {
+  padding-bottom:10px;
 }
 
 // p {
@@ -47,11 +54,15 @@ input {
 }
 
 .btn {
-  background-color: #000;
-  color: #FFF;
-  font-family: map-get($font-stack-map, PlayfairDisplay);
-  font-weight: 300;
-  text-transform: uppercase;
+  &-primary {
+    @include hover-focus {
+      background-color: #48A8A9;
+
+      &:active {
+        background-color: #48A8A9;
+      }
+    }
+  }
 }
 
 .toggle {

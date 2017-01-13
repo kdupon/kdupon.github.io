@@ -26,6 +26,11 @@ repository: kdupon/kdupon.github.io
 # Snippet ids
 google_analytics: UA-89874612-1
 
+# Custom collections
+collections:
+  recipes:
+    output: true
+
 # Build settings
 markdown: kramdown
 

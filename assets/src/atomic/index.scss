@@ -3,6 +3,12 @@
 @import '../common/variables';
 @import '../common/reboot';
 
+@import 'footer';
 @import 'header';
 @import 'home';
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
