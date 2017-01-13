@@ -32,11 +32,6 @@ li {
   padding-bottom:10px;
 }
 
-// p {
-//   font-family: 'Lato Light', sans-serif;
-//   font-size: 1em;
-//   color: #000;
-// }
 
 /*Form*/
 label {
@@ -80,4 +75,15 @@ input {
   height: auto;
   opacity: 1;
   transition: opacity 400ms ease-in 400ms;
+}
+
+
+
+
+html {
+  background-color: #000;
+}
+
+.card-title {
+  font-family: font-get(PlayfairDisplay);
 }

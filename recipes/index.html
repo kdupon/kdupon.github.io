@@ -2,9 +2,17 @@
 layout: default
 ---
 
-<h1>Recipes</h1>
-<ul>
+<div class="card-columns" style="column-gap: 30px">
 {% for recipe in site.recipes %}
-  <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+  <div class="card" style="margin-bottom: 30px;">
+    <div class="card-block">
+      <h3 class="card-title">{{ recipe.title }}</h3>
+      <h6 class="card-subtitle mb-3 text-muted">{{ recipe.date | date: "%m.%d.%y"}} {% for tag in recipe.tags %} &middot; {{ tag }} {% endfor %}</h6>
+      <p class="card-text">{{ recipe.description }}</p>
+      <a href="{{ recipe.url }}" class="btn btn-primary">Read</a>
+    </div>
+  </div>
 {% endfor %}
-</ul>
+</div>
+
+
