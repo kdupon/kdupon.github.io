@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-family: map-get($font-stack-map, Lato);
+  font-family: font-get(Lato);
   font-weight: 400;
   font-size: 1em;
   color: #000;
