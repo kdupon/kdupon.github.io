@@ -2,11 +2,29 @@
 layout: base
 ---
 
-<main class="home" style="flex: 1;">
-  <div class="hero-target">
-    <img style="margin-bottom: 100px;" class="hero-outlet" src="/assets/uploads/photos/KD_Homepage_01.jpg" alt="Kate Dupon Ireland Trip"/>
-  </div>
+{% assign entities = "" | split: "" %}
+  {% for collection in site.collections %}
+    {% for entity in site[collection.label] %}
+      {% assign entities = entities | push: entity %}
+    {% endfor %}
+  {% endfor %}
+{% assign entities = (entities | sort: "date") | reverse %}
 
-  {% include components/resume.html %}
-  {% include components/contact-form.html %}
+<main class="home container-fluid" style="flex: 1; padding-top: 30px">
+  <div class="card-columns" style="column-count: 4; column-gap: 30px">
+  {% for entity in entities %}
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-block">
+        <h3 class="card-title">{{ entity.title }}</h3>
+        <h6 class="card-subtitle mb-3 text-muted">{{ entity.date | date: "%m.%d.%y"}} {% for tag in entity.tags %} &middot; {{ tag }} {% endfor %}</h6>
+        <p class="card-text">{{ entity.description }}</p>
+        <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+  <div class="container">
+    {% include components/resume.html %}
+    {% include components/contact-form.html %}
+  </div>
 </main>

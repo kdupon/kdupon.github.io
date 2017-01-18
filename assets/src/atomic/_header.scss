@@ -1,13 +1,17 @@
-.global-header {
-  border-bottom: 1px solid #ccc;
+.site-header {
+  background-color: #fff;
   font-size: 1rem;
   padding: 1.25em 0;
 
-  .svg-target {
+  div {
     text-align: center;
+  }
 
-    svg {
-      height: 2em;
-    }
+  a {
+    display: inline-block;
+  }
+
+  svg {
+    height: 2em;
   }
 }

@@ -1,0 +1,77 @@
+.site-sidebar {
+  blockquote {
+    position: relative;
+    padding: 2.5rem 2rem;
+    text-align: justify;
+    font-size: (22 / 16) * 1rem;
+    font-family: font-get(PlayfairDisplay);
+    margin-bottom: 30px;
+
+    &:before,
+    &:after {
+      content: quote('');
+      position: absolute;
+      border: 1px solid black;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:after {
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 3rem 2rem;
+    margin-bottom: 3px;
+    color: #fff;
+
+    @include hover-focus {
+      color: darken(#fff, 17);
+
+      nav:before,
+      nav:after {
+        background-color: darken(#fff, 17);
+      }
+    }
+  }
+
+  nav {
+    position: relative;
+    font-family: font-get(PlayfairDisplay);
+    font-size: 1.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 2px;
+    padding-bottom: 4px;
+
+    &:before,
+    &:after {
+      content: quote('');
+      position: absolute;
+      background-color: #fff;
+      height: 1px;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:after {
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
