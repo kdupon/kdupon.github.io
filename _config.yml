@@ -15,10 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 title: Kate Dupon
 email: ktdupon@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >
+  I am an experienced UX Designer turned Product Manager, who specializes in 
+  strategizing, conceptualization, and forming thoughtful, useful, and 
+  beautiful end-to-end experiences.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://katedupon.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: kdupon/kdupon.github.io
@@ -27,6 +27,7 @@ repository: kdupon/kdupon.github.io
 google_analytics: UA-89874612-1
 
 # Custom collections
+permalink: pretty
 collections:
   recipes:
     output: true
