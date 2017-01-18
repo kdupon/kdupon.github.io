@@ -9,6 +9,11 @@
 
   a {
     display: inline-block;
+
+    &::before {
+      content: quote('');
+      margin-right: 0;
+    }
   }
 
   svg {

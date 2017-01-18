@@ -42,3 +42,13 @@ module.exports.uniq = (userArray) => {
   return Object.keys(unique);
 };
 
+/**
+ * @export
+ * @param {string} dependency
+ * @param {any} [fallback]
+ * @return {any}
+ */
+module.exports.desire = (dependency, fallback) => {
+  try { require.resolve(dependency); } catch (e) { return fallback; }
+  return require(dependency);
+};

@@ -1,29 +1,78 @@
 .home {
+  h1 {
+    font-size: 1.375rem;
+    line-height: 1.5;
+  }
+
+  .resume {
+    background-color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  .btn-link {
+    margin-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .collapse,
+  .collapsing {
+    h1 {
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0;
+    } 
+
+    hr {
+      padding-bottom: .5rem;
+    }
+
+    .col-md-6 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .collapsing {
+    @include transition(height 600ms ease-in-out);
+  }
+
   .contact-form {
-    background-color: #f8f8f8;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 6rem;
+      padding-top: 6rem;
+    }
 
     ul {
       list-style-type: none;
-
-      a {
-        &::before {
-          content: '+';
-          margin-right: .5em;
-        }
-      }
+      margin: 0;
+      padding: 0;
     }  
   }
 
+// old hero
+
   .hero-target {
-    background-color: #f8f8f8;
     width: 100%;
   }
 
   .hero-outlet {
-    display: block;
-    margin: auto;
-    max-width: 1440px;
     width: 100%;
-    margin-bottom: 150px;
   }
 }

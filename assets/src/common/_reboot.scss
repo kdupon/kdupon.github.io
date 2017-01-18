@@ -1,54 +1,32 @@
 @import '~bootstrap/scss/mixins';
 
-/*General*/
-hr {
-  border-top: 1px solid #000;
-  padding-bottom: 25px;
+html {
+  background-color: #000;
 }
 
-/*Typography*/
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.375em;
-  line-height: 1.65em;
-  color: #000;
-  margin-bottom: 25px;
+h1, .h1 {
+  font-family: font-get(PlayfairDisplay);
 }
 
-h2 {
-  font-family: font-get(Lato);
+h2, .h2 {
   font-weight: 400;
-  font-size: 1em;
-  color: #000;
-  margin-bottom: 5px;
 }
 
-p {
-  font-weight: 300;
-}
-
-li {
-  padding-bottom:10px;
-}
-
-
-/*Form*/
-label {
-  font-family: 'Playfair Display', serif;
-  font-size: 1em;
-  color: #000;
-}
-
-input {
-  background-color: #FFF;
-  border: none;
-  font-family: 'Lato Light', sans-serif;
-  font-size: 0.875em;
-  color: #999;
+a,
+.btn-link {
+  font-family: font-get(PlayfairDisplay);
+  text-transform: uppercase;
+  
+  &::before {
+    content: '+';
+    margin-right: .5em;
+  }
 }
 
 .btn {
+  font-family: font-get(PlayfairDisplay);
+  text-transform: uppercase;
+
   &-primary {
     @include hover-focus {
       background-color: #48A8A9;
@@ -58,30 +36,6 @@ input {
       }
     }
   }
-}
-
-.toggle {
-  margin-right: .5em;
-}
-
-.resume-collapse {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 400ms ease-out 400ms;
-}
-
-.toggle:checked ~ .resume-collapse {
-  height: auto;
-  opacity: 1;
-  transition: opacity 400ms ease-in 400ms;
-}
-
-
-
-
-html {
-  background-color: #000;
 }
 
 .card-title {

@@ -9,7 +9,7 @@
     "jekyll-serve": "bundle exec jekyll serve",
     "start": "parallelshell \"bundle exec jekyll build --watch\" \"webpack --hide-modules --watch --config webpack/webpack.config.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --hide-modules --watch --config webpack/webpack.config.js"
+    "watch": "webpack --progress --watch --config webpack/webpack.config.js"
   },
   "repository": {
     "type": "git",
