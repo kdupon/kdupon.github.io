@@ -16,7 +16,7 @@ layout: default
     <div class="card-block">
       <h3 class="card-title">{{ entity.title }}</h3>
       <h6 class="card-subtitle mb-3 text-muted">{{ entity.date | date: "%m.%d.%y"}} {% for tag in entity.tags %} &middot; {{ tag }} {% endfor %}</h6>
-      <p class="card-text">{{ entity.description }}</p>
+      <p class="card-text">{{ entity.description | truncate: 255 }}</p>
       <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
     </div>
   </div>
