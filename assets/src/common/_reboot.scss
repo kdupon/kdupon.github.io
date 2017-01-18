@@ -16,10 +16,12 @@ a,
 .btn-link {
   font-family: font-get(PlayfairDisplay);
   text-transform: uppercase;
-  
-  &::before {
-    content: '+';
-    margin-right: .5em;
+
+  &.plus-link {
+    &::before {
+      content: '+';
+      margin-right: .5em;
+    }
   }
 }
 
