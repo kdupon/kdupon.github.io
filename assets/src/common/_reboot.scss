@@ -32,7 +32,7 @@ a,
       background-color: #48A8A9;
 
       &:active {
-        background-color: #48A8A9;
+        background-color: darken(#48A8A9, 6);
       }
     }
   }
