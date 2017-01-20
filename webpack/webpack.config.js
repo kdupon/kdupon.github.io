@@ -4,15 +4,14 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 
-const rules = require('./webpack.rules');
-const plugins = require('./webpack.plugins');
-
-// TODO: move to plugins file
+// Plugins
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const sourceMapQueryStr = '+sourceMap';
+// Configuration settings
+const sourceMapQueryStr = (argv.p) ? '+sourceMap' : '-sourceMap';
 
+// Common Webpack configuration
 let webpackConfig = {
   node: {
     global: true,
@@ -22,7 +21,7 @@ let webpackConfig = {
     process: true,
     Buffer: false,
   },
-  // Only run webpack with `npm run` commands in `~/package.json`
+  // Only run webpack with the `npm run` commands from `~/package.json`
   context: process.cwd(),
   entry: {
     atomic: [
@@ -36,21 +35,34 @@ let webpackConfig = {
   },
   devtool: '#source-map',
   output: {
-    filename: 'js/[name].js',
-    path: path.join(process.cwd(), 'assets/built'),
-    publicPath: '/',
+    filename: 'assets/built/js/[name].js',
+    path: process.cwd(),
   },
   module: {
     rules: [
-      rules.jsLoader,
-      rules.sassLoader,
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style',
+          loader: [
+            `css?${sourceMapQueryStr}`,
+            `resolve-url?${sourceMapQueryStr}`,
+            `sass?${sourceMapQueryStr}`,
+          ],
+        }),
+      },
     ]
   },
   plugins: [
     new ExtractTextPlugin({
       allChunks: true,
-      // disable: argv.watch,
-      filename: 'css/[name].css',
+      disable: argv.watch,
+      filename: 'assets/built/css/[name].css',
     }),
   ],
   resolve: {
@@ -65,6 +77,7 @@ let webpackConfig = {
 }
 
 if (argv.watch) {
+  console.log('[ADDING WATCH CONFIGURATIONS]')
   webpackConfig.entry = require('./addons/addHotMiddleware')(webpackConfig.entry);
   webpackConfig = merge(webpackConfig, require('./webpack.config.watch'));
 }

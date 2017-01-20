@@ -6,7 +6,7 @@
  */
 module.exports = (entry) => {
   const results = {};
-  const hotMiddlewareScript = 'webpack-hot-middleware/client?timeout=20000&reload=false';
+  const hotMiddlewareScript = 'webpack-hot-middleware/client?timeout=20000&reload=true';
 
   Object.keys(entry).forEach((name) => {
     results[name] = Array.isArray(entry[name]) ? entry[name].slice(0) : [entry[name]];
