@@ -18,9 +18,3 @@
 @import 'header';
 @import 'home';
 @import 'sidebar';
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}

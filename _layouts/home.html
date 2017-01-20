@@ -10,8 +10,8 @@ layout: base
   {% endfor %}
 {% assign entities = (entities | sort: "date") | reverse %}
 
-<main class="home container-fluid" style="flex: 1; padding-top: 30px">
-  <div class="card-columns" style="column-count: 4; column-gap: 30px">
+<main class="home container-fluid w-100">
+  <!--<div class="card-columns" style="column-count: 4; column-gap: 30px">
   {% for entity in entities %}
     <div class="card" style="margin-bottom: 30px;">
       <div class="card-block">
@@ -22,8 +22,11 @@ layout: base
       </div>
     </div>
   {% endfor %}
-  </div>
-  <div class="container">
+  </div>-->
+
+  <img class="hero-outlet" src="/assets/uploads/photos/KD_Homepage_01.jpg" alt="Kate Dupon Ireland Trip"/>
+
+  <div class="row">
     {% include components/resume.html %}
     {% include components/contact-form.html %}
   </div>
