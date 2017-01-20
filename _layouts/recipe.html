@@ -14,7 +14,7 @@ layout: default
 {% endunless %}
 {% unless page.skill_level %}
   <div class="alert alert-danger" role="alert">
-    <code>oven_temperature</code> is not defined
+    <code>skill_level</code> is not defined
   </div>
 {% endunless %}
 
@@ -47,6 +47,14 @@ layout: default
         <li>{{ingredient}}</li>
         {% endfor %}
       </ul>
+      {% if page.sauce_ingredients %}
+      <h3>Sauce Ingredients</h3>
+      <ul>
+        {% for ingredient in page.sauce_ingredients %}
+        <li>{{ingredient}}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
     <div class="col-md-6">
       <h3>Instructions</h3>
