@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const argv = require('minimist')(process.argv.slice(2));
 
-const sourceMapQueryStr = '+sourceMap';
+const sourceMapQueryStr = (argv.p) ? '+sourceMap' : '-sourceMap';
 
 const jsLoader = {
   test: /\.js$/,

@@ -1,11 +1,15 @@
-const CleanPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const argv = require('minimist')(process.argv.slice(2));
 const path = require('path');
-const webpack = require('webpack');
 
-const loaders = require('./webpack.loaders');
-const {addHotMiddleware, merge} = require('./util');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+
+const rules = require('./webpack.rules');
+const plugins = require('./webpack.plugins');
+
+// TODO: move to plugins file
+const CleanPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const sourceMapQueryStr = '+sourceMap';
 
@@ -18,6 +22,7 @@ let webpackConfig = {
     process: true,
     Buffer: false,
   },
+  // Only run webpack with `npm run` commands in `~/package.json`
   context: process.cwd(),
   entry: {
     atomic: [
@@ -37,14 +42,14 @@ let webpackConfig = {
   },
   module: {
     rules: [
-      loaders.jsLoader,
-      loaders.sassLoader,
+      rules.jsLoader,
+      rules.sassLoader,
     ]
   },
   plugins: [
     new ExtractTextPlugin({
       allChunks: true,
-      disable: argv.watch,
+      // disable: argv.watch,
       filename: 'css/[name].css',
     }),
   ],
@@ -60,7 +65,7 @@ let webpackConfig = {
 }
 
 if (argv.watch) {
-  webpackConfig.entry = addHotMiddleware(webpackConfig.entry);
+  webpackConfig.entry = require('./addons/addHotMiddleware')(webpackConfig.entry);
   webpackConfig = merge(webpackConfig, require('./webpack.config.watch'));
 }
 
