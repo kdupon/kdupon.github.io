@@ -1,0 +1,49 @@
+.recipe-layout {
+  background-color: #fff;
+  padding: $spacer * 3;
+
+  .recipe-title {
+    font-family: font-get(PlayfairDisplay);
+    font-size: (26 / 16) * 1rem;
+    margin-bottom: $spacer;
+  }
+
+  .recipe-tags {
+    margin-bottom: $spacer * 3;
+  }
+
+  .recipe-content {
+    font-family: font-get(PlayfairDisplay);
+    margin-bottom: $spacer * 3;
+  }
+
+  .recipe-description {
+    margin-bottom: $spacer * 3;
+  }
+
+  .recipe-details {
+    font-family: font-get(PlayfairDisplay);
+    margin-bottom: $spacer * 3;
+  }
+
+  h3 {
+    font-family: font-get(PlayfairDisplay);
+    font-size: (18 / 16) * 1rem;
+  }
+
+  ol, ul {
+    padding-left: 0;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    margin-bottom: $spacer * .5;
+  }
+}
