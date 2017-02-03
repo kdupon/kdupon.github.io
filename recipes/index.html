@@ -5,9 +5,11 @@ layout: default
 <div class="card-columns" style="column-gap: 30px">
 {% for recipe in site.recipes %}
   <div class="card" style="margin-bottom: 30px;">
+    {% if recipe.image_src %}
+    <img class="card-img-top" src="{{ recipe.image_src }}" alt="{{ recipe.image_src }}">
+    {% endif %}
     <div class="card-block">
-      <h3 class="card-title">{{ recipe.title }}</h3>
-      <h6 class="card-subtitle mb-3 text-muted">{{ recipe.date | date: "%m.%d.%y"}} {% for tag in recipe.tags %} &middot; {{ tag }} {% endfor %}</h6>
+      <h3 class="card-title h5">{{ recipe.title }}</h3>
       <p class="card-text">{{ recipe.description }}</p>
       <a href="{{ recipe.url }}" class="btn btn-primary">Read</a>
     </div>

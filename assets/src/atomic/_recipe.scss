@@ -9,7 +9,18 @@
   }
 
   .recipe-tags {
-    margin-bottom: $spacer * 3;
+    margin-bottom: $spacer * 1;
+    font-family: font-get(PlayfairDisplay);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+
+    @include hover-focus {
+      color: #48A8A9;
+    }
+  }
+
+  .recipe-description {
+    margin-bottom: $spacer * 1.5;
   }
 
   .recipe-content {
@@ -17,13 +28,36 @@
     margin-bottom: $spacer * 3;
   }
 
-  .recipe-description {
-    margin-bottom: $spacer * 3;
-  }
-
   .recipe-details {
     font-family: font-get(PlayfairDisplay);
     margin-bottom: $spacer * 3;
+
+    .details {
+      display: table;
+    }
+
+    .icon,
+    .info {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    svg {
+        display: block;
+        width: 2rem;
+    }
+
+    .info {
+      font-family: font-get(PlayfairDisplay);
+    }
+
+    .value {
+      font-weight: lighter;
+    }
+
+    .label {
+      font-weight: bold;
+    }
   }
 
   h3 {
@@ -31,16 +65,13 @@
     font-size: (18 / 16) * 1rem;
   }
 
-  ol, ul {
+  ul {
     padding-left: 0;
+    list-style-type: none;
   }
 
   ol {
-    list-style-position: inside;
-  }
-
-  ul {
-    list-style-type: none;
+    padding-left: $spacer;
   }
 
   li {

@@ -18,24 +18,53 @@ layout: default
   </div>
 {% endunless %}
 
+<div class="container" hidden>
+  <nav><a href="">< Back</a></nav>
+</div>
+
 <div class="recipe-layout container">
   <h2 class="recipe-title">{{ page.title }}</h2>
   <p class="recipe-tags">{{ page.date | date: "%m.%d.%y"}} {% for tag in page.tags %} &middot; {{ tag }} {% endfor %}</p>
-  <div class="recipe-content">{{ content }}</div>
   <p class="recipe-description">{{ page.description }}</p>
-  <p class="recipe-details">
-    <span>{{ page.total_time }}</span>
-    <span>&middot;</span>
-    <span>{{ page.servings }} Servings</span>
-    <span>&middot;</span>
-    <span>{{ page.skill_level }} Skill Level</span>
+  <div class="recipe-content">{{ content }}</div>
+  <div class="recipe-details d-flex justify-content-between">
+    <div class="detail">
+      <div class="icon pr-3">{% include icons/Icon_Cooking-Time.svg %}</div>
+      <div class="info">
+        <div class="value mb-1">{{ page.total_time }}</div>
+        <h3 class="label mb-0">Total Time</h3>
+      </div>
+    </div>
+
+    <div class="detail">
+      <div class="icon pr-3">{% include icons/Icon_Servings.svg %}</div>
+      <div class="info">
+        <div class="value mb-1">{{ page.servings }}</div>
+        <h3 class="label mb-0">Servings</h3>
+      </div>
+    </div>
+
+    <div class="detail">
+      <div class="icon pr-3">{% include icons/Icon_Skill-Set.svg %}</div>
+      <div class="info">
+        <div class="value mb-1">{{ page.skill_level }}</div>
+        <h3 class="label mb-0">Skill Level</h3>
+      </div>
+    </div>
+
     {% if page.oven_temperature %}
-    <span>&middot;</span>
-    <span>{{ page.oven_temperature }} &deg; Oven Temperature</span>
+    <div class="detail">
+      <div class="icon pr-3">{% include icons/Icon_Temperature.svg %}</div>
+      <div class="info">
+        <div class="value mb-1">{{ page.oven_temperature }}</div>
+        <h3 class="label mb-0">Oven Temperature</h3>
+      </div>
+    </div>
     {% endif %}
-  </p>
+  </div>
+
   <div class="row">
-    <div class="col-md-5 recipe-ingredients">
+    <div class="col-md-4 recipe-ingredients">
       <h3>Ingredients</h3>
       <ul>
         {% for ingredient in page.ingredients %}<li>{{ingredient}}</li>{% endfor %}
@@ -48,11 +77,17 @@ layout: default
       </ul>
       {% endif %}
     </div>
-    <div class="col-md-7 recipe-instructions">
+    <div class="col-md-8 recipe-instructions">
       <h3>Instructions</h3>
       <ol>
-        {% for instruction in page.instructions %}<li>{{instruction}}</li>{% endfor %}
+        {% for instruction in page.instructions %}<li class="pl-2">{{instruction}}</li>{% endfor %}
       </ol>
     </div>
   </div>
+</div>
+
+<div class="container mt-3 mb-5 py-4" style="background-color: white">
+  {% if site.disqus.shortname %}
+    {% include snippets/disqus-comments.html %}
+  {% endif %}
 </div>

@@ -16,14 +16,16 @@
 title: Kate Dupon
 email: ktdupon@gmail.com
 description: >
-  I am an experienced UX Designer turned Product Manager, who specializes in 
-  strategizing, conceptualization, and forming thoughtful, useful, and 
+  I am an experienced UX Designer turned Product Manager, who specializes in
+  strategizing, conceptualization, and forming thoughtful, useful, and
   beautiful end-to-end experiences.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://katedupon.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: kdupon/kdupon.github.io
 
 # Snippet ids
+disqus:
+  shortname: katedupon
 google_analytics: UA-89874612-1
 
 # Custom collections

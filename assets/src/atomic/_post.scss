@@ -1,0 +1,44 @@
+.post {
+  background-color: #fff;
+  padding: $spacer * 3;
+
+  p{
+    line-height: 1.688rem;
+    letter-spacing: .25px;
+  }
+
+  .post-title {
+    font-family: font-get(PlayfairDisplay);
+    font-size: (26 / 16) * 1rem;
+    line-height: (34 / 16) * 1rem;
+  }
+
+  .post-tagline {
+    font-family: font-get(Lato);
+    font-style: italic;
+    font-size: (22 / 16) * 1rem;
+  }
+
+  h3 {
+    font-family: font-get(PlayfairDisplay);
+    font-size: (18 / 16) * 1rem;
+    line-height: (26 / 16) * 1rem;
+    padding-top: 0.938rem;
+  }
+
+  blockquote p {
+    font-family: font-get(PlayfairDisplay);
+    font-size: (22 / 16) * 1rem;
+    line-height: (34 / 16) * 1rem;
+    border-left: 2px solid #48A8A9;
+    padding: 0 25px;
+    color: #48A8A9;
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+
+  ul li {
+  padding-bottom: 10px;
+  }
+
+}
