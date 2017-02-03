@@ -2,9 +2,10 @@
 layout: post
 title:  "Cultivating Empathy"
 tagline:  Remember the humans.
+excerpt: A small description.
+
 date:   2017-02-01 17:57:12 -0500
 categories: design-strategize
-
 ---
 
 ![I didn't come this far, to only come this far.](/assets/uploads/photos/create/Quote_Empathy.png)
@@ -12,8 +13,8 @@ categories: design-strategize
 ### What does it mean to have empathy for a user?
 Empathy is having the ability to **feel what others feel**. It is putting yourself into someone else’s situation and letting yourself **feel alongside that other person**. When we have real, true empathy for a user we are allowing ourselves to feel their pain points and moments of delight.
 
-### Psst, users, are humans.
-Sometimes this is the hardest thing to remember. Users are humans. They aren’t numbers or metrics or a way to make a buck. They are real-life beings who breathe, have families, set goals, and experience pain that they are looking to experts to solve. That’s where we come in. Users look to us to **solve a need and add delight** to their lives. It’s easy to get pulled into business objectives and requirements and forget that real individuals have to interact with our products or services.
+### Psst, users...are humans.
+Sometimes this is the hardest thing to remember. Users are humans. They are real-life beings who breathe, have families, set goals, and experience pain that they are looking to experts to solve. That’s where we come in. Users look to us to **solve a need and add delight** to their lives. It’s easy to get pulled into business objectives and requirements and forget that real individuals have to interact with our products or services.
 
 ### Why is it so hard to maintain empathy?
 We are who we surround ourselves with, so if we find ourselves in a situation where users take a backseat, it can be really hard to keep our sense of empathy. It can be an exhausting experience trying to ensure that all stakeholders understand the importance of the user, their happiness, and their attitude toward your product or service. It’s hard to have team members understand that having emotion for the user isn’t weakness. That emotion is having a thorough understanding of someone else’s needs and desires to the point where you feel what they feel. **You feel their pain; you feel their joy.** It’s easy to mistake emotion in business for weakness, but it’s actually the best strength you can have. It’s passion. **Caring for other humans is never a weakness.** It’s difficult to fight for the user continuously, to fight for what’s right and what we can all be proud of at the end of the day.

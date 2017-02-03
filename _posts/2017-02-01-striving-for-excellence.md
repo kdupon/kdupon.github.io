@@ -22,7 +22,7 @@ I’ve always been someone who lives in the details. I am constantly looking for
 Okay, really? These are excuses. Do what you can with what you have. We don’t have to do everything and we are never going to reach the perfect solution. I’m not proposing that we should all reach for 100% or just give up. I’m merely suggesting that we all **try harder to produce quality work** for everything we create no matter the budget, the timeline, the goal, etc. I think there is a common misconception that focusing on details means obtaining perfection. Perfection is something we should always strive for, but most likely, it isn’t achievable. Focusing on details means that **we are contributing to something bigger than the current piece of the puzzle.** By focusing on the details wherever we are in an experience, we are helping to form the larger picture.
 
 ### What can we do?
-Too often, we settle. We settle in our jobs, we settle in our lifestyles, we settle in our goals. I say, **let’s knock that shit off.** Let’s change the landscape and the expected.
+Too often, we settle. We settle in our jobs, we settle in our lifestyles, we settle in our goals. Let’s change the landscape and the expected.
 
 > Let’s try for something better and something more meaningful. Let’s do more with what we have and inspire those around us. Let’s try.
 
