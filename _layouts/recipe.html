@@ -24,7 +24,6 @@ layout: default
 
 <div class="recipe-layout container">
   <h2 class="recipe-title">{{ page.title }}</h2>
-  <p class="recipe-tags">{{ page.date | date: "%m.%d.%y"}} {% for tag in page.tags %} &middot; {{ tag }} {% endfor %}</p>
   <p class="recipe-description">{{ page.description }}</p>
   <div class="recipe-content">{{ content }}</div>
   <div class="recipe-details d-flex justify-content-between">

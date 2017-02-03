@@ -6,9 +6,13 @@ excerpt: A small description.
 
 date:   2017-02-01 17:57:12 -0500
 categories: design-strategize
+image_src: /assets/uploads/photos/create/Quote_Empathy.png
+image_alt: Take Their Journey
+
 ---
 
-![I didn't come this far, to only come this far.](/assets/uploads/photos/create/Quote_Empathy.png)
+![{{ page.image_alt }}]({{ page.image_src }})
+
 
 ### What does it mean to have empathy for a user?
 Empathy is having the ability to **feel what others feel**. It is putting yourself into someone else’s situation and letting yourself **feel alongside that other person**. When we have real, true empathy for a user we are allowing ourselves to feel their pain points and moments of delight.
