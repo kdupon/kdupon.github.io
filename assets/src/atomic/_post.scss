@@ -7,6 +7,11 @@
     letter-spacing: .25px;
   }
 
+  img {
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
+
   .post-title {
     font-family: font-get(PlayfairDisplay);
     font-size: (26 / 16) * 1rem;
@@ -24,6 +29,25 @@
     font-size: (18 / 16) * 1rem;
     line-height: (26 / 16) * 1rem;
     padding-top: 0.938rem;
+  }
+
+  h5 {
+    font-family: font-get(Lato);
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom:15px;
+  }
+
+  a.inline-link {
+    font-family: font-get(Lato);
+    text-transform: none;
+    font-size: 16px;
+    color: #48A8A9;
+    padding: 0;
+    margin: 0;
   }
 
   blockquote p {
