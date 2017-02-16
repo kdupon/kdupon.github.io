@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% assign entities = "" | split: "" %}
+  {% for collection in site.collections %}
+    {% for entity in site[collection.label] %}
+      {% assign entities = entities | push: entity %}
+    {% endfor %}
+  {% endfor %}
+{% assign entities = (entities | sort: "date") | reverse %}
+
+
+
+<script>
+  (function() {
+    "use strict";
+
+    window.store = [
+      {% for entity in entities %} {
+        "date": "{{ entity.date | date: "%m.%d.%y" | xml_escape }}",
+        "description": {{ entity.description | strip_html | strip_newlines | jsonify }},
+        "excerpt": {{ entity.description | truncate: 255 | strip_html | strip_newlines | jsonify }},
+        "id": "{{ entity.id | slugify }}",
+        "title": "{{ entity.title | xml_escape }}",
+        "url": "{{ entity.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+
+    console.log(window.store);
+
+  })();
+</script>
+
+<div id="root"></div>
+<script src="/assets/built/js/entities.js"></script>
+
+<!--<div class="card-columns" style="column-gap: 30px">
+{% for entity in entities %}
+  <div class="card" style="margin-bottom: 30px;">
+    <div class="card-block">
+      <h3 class="card-title">{{ entity.title }}</h3>
+      <h6 class="card-subtitle mb-3 text-muted">{{ entity.date | date: "%m.%d.%y"}} {% for tag in entity.tags %} &middot; {{ tag }} {% endfor %}</h6>
+      <p class="card-text">{{ entity.description | truncate: 255 }}</p>
+      <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+    </div>
+  </div>
+{% endfor %}
+</div>-->
