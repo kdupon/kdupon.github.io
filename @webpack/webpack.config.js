@@ -21,6 +21,7 @@ let WEBPACK_CONFIG = {
     //   './@src/search/search.js',
     // ],
     vendor: [
+      'bootstrap',
       './@src/vendor/vendor.js',
       './@src/vendor/vendor.scss',
     ],
@@ -42,7 +43,6 @@ let WEBPACK_CONFIG = {
         exclude: /node_modules/,
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style',
-          // publicPath: '../',
           loader: [
             `css?${sourceMapQueryStr}`,
             `resolve-url?${sourceMapQueryStr}`,

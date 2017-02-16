@@ -10,6 +10,7 @@
     "build:webpack": "webpack --progress --config @webpack/webpack.config.js",
     "release": ". ./@scripts/release.sh",
     "david": "david",
+    "deploy": ". ./@scripts/deploy.sh",
     "lint": "npm-run-all --parallel lint:*",
     "lint:scripts": "eslint @src",
     "lint:styles": "scss-lint",
