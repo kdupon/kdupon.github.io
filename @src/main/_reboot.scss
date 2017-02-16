@@ -1,0 +1,17 @@
+@import '~bootstrap/scss/mixins';
+
+html {
+  background-color: #000;
+}
+
+a {
+  font-family: font-get(PlayfairDisplay);
+  text-transform: uppercase;
+
+  &.plus-link {
+    &::before {
+      content: '+';
+      margin-right: .5em;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+
+// Site fonts
+$font-stack-map: (
+  Lato: #{'Lato', sans-serif},
+  PlayfairDisplay: #{'Playfair Display', serif}
+);
+
+@function font-get($name) {
+  @return map-get($font-stack-map, $name);
+}

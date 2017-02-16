@@ -1,4 +1,6 @@
-@import '../common/variables';
+@import '../common/addons';
+@import '../config/bootstrap';
 @import '~bootstrap/scss/bootstrap';
 
+@import 'bootstrap/modifications/buttons';
 @import 'bootstrap/modifications/cards';

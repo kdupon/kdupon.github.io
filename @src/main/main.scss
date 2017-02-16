@@ -11,9 +11,10 @@
   }
 }
 
-@import '../common/variables';
-@import '../common/reboot';
+@import '../common/addons';
+@import '../config/bootstrap';
 
+@import 'reboot';
 @import 'footer';
 @import 'header';
 @import 'home';
