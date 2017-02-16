@@ -41,9 +41,11 @@ gems:
   - jekyll-feed
 
 exclude:
-  - assets/src/
+  - "@scripts/"
+  - "@src/"
+  - "@test/"
+  - "@webpack/"
   - node_modules/
-  - webpack/
   - Gemfile
   - Gemfile.lock
   - package.json

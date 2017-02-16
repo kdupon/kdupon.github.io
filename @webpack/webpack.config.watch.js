@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const BrowserSyncPlugin = require('browsersync-webpack-plugin');
 
-const BSYNC_PROXY_URL = 'http://localhost:3000/';
+const BSYNC_PROXY_URL = 'http://localhost:3000/@dist/';
 const JEKYLL_TARGET_URL = 'http://127.0.0.1:4000/';
 
 module.exports = {
@@ -14,10 +14,12 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new BrowserSyncPlugin({
-      target: JEKYLL_TARGET_URL,
+      delay: 500,
       proxyUrl: BSYNC_PROXY_URL, 
+      target: JEKYLL_TARGET_URL,
       watch: [
         '_site/**/*.html',
       ],
