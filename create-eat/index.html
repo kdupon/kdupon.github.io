@@ -3,18 +3,21 @@ layout: default
 ---
 
 <h1 class="h3 mb-4">Create &amp; Eat</h1>
-
-<div class="card-columns" style="column-gap: 30px">
-{% for recipe in site.recipes %}
-  <div class="card" style="margin-bottom: 30px;">
-    {% if recipe.image_src %}
-    <img class="card-img-top" src="{{ recipe.image_src }}" alt="{{ recipe.image_src }}">
-    {% endif %}
-    <div class="card-block">
-      <h3 class="card-title h5">{{ recipe.title }}</h3>
-      <p class="card-text">{{ recipe.description }}</p>
-      <a href="{{ recipe.url }}" class="btn btn-primary">Read</a>
+<div class="row">
+  <div class="card-masonry">
+  {% for recipe in site.recipes %}
+    <div class="card-col mb-4">
+      <div class="card">
+        {% if recipe.image_src %}
+        <img class="card-img-top" src="{{ recipe.image_src }}" alt="{{ recipe.image_src }}">
+        {% endif %}
+        <div class="card-block">
+          <h3 class="card-title h5">{{ recipe.title }}</h3>
+          <p class="card-text">{{ recipe.description }}</p>
+          <a href="{{ recipe.url }}" class="btn btn-primary">Read</a>
+        </div>
+      </div>
     </div>
+  {% endfor %}
   </div>
-{% endfor %}
 </div>

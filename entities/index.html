@@ -10,20 +10,24 @@ layout: default
   {% endfor %}
 {% assign entities = (entities | sort: "date") | reverse %}
 
-<div class="card-columns" style="column-gap: 30px">
-{% for entity in entities %}
-  <div class="card" style="margin-bottom: 30px;">
-    {% if entity.image_src %}
-    <img class="card-img-top" src="{{ entity.image_src }}" alt="{{ entity.image_src }}">
-    {% endif %}
-    <div class="card-block">
-      <h3 class="card-title h5">{{ entity.title }}</h3>
-      {% if entity.tagline %}
-      <p class="card-text">{{ entity.tagline }}</p>
-      {% endif %}
-      <p class="card-text">{{ entity.description | truncate: 255 }}</p>
-      <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+<div class="row">
+  <div class="card-masonry">
+  {% for entity in entities %}
+    <div class="card-col mb-4">
+      <div class="card">
+        {% if entity.image_src %}
+        <img class="card-img-top" src="{{ entity.image_src }}" alt="{{ entity.image_src }}">
+        {% endif %}
+        <div class="card-block">
+          <h3 class="card-title h5">{{ entity.title }}</h3>
+          {% if entity.tagline %}
+          <p class="card-text">{{ entity.tagline }}</p>
+          {% endif %}
+          <p class="card-text">{{ entity.description | truncate: 255 }}</p>
+          <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+        </div>
+      </div>
     </div>
+  {% endfor %}
   </div>
-{% endfor %}
 </div>

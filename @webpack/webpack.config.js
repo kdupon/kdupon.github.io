@@ -22,6 +22,7 @@ let WEBPACK_CONFIG = {
     // ],
     vendor: [
       'bootstrap',
+      'masonry-layout',
       './@src/vendor/vendor.js',
       './@src/vendor/vendor.scss',
     ],
@@ -64,6 +65,9 @@ let WEBPACK_CONFIG = {
   context: process.cwd(),
   devtool: (settings.env.development ? '#source-map' : undefined),
   resolve: {
+    alias: {
+      'masonry': 'masonry-layout',
+    },
     enforceExtension: false,
     modules: [ path.resolve(process.cwd(), '@src'), 'node_modules' ],
   },
@@ -77,6 +81,8 @@ WEBPACK_CONFIG.plugins.push(
   new webpack.ProvidePlugin({
     $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery',
     Tether: 'tether', 'window.Tether': 'tether',
+    isotope: 'isotope-layout',
+    masonry: 'masonry',
   })
 );
 

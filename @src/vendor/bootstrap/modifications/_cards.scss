@@ -2,3 +2,25 @@
   font-family: font-get(PlayfairDisplay);
   line-height: 1.5;
 }
+
+.card-masonry {
+  width: 100%;
+
+  .card-col {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: percentage(1 / 3);
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 25%;
+    }
+  }
+}
