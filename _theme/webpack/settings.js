@@ -5,8 +5,8 @@ const root = process.cwd();
 
 module.exports = {
   env: {
-    development: !((argv.env && argv.env.production) || argv.p),
-    production: !!((argv.env && argv.env.production) || argv.p),
+    development: !isProduction,
+    production: !!isProduction,
   },
   root,
   enabled: {

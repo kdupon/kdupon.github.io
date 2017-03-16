@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const BrowserSyncPlugin = require('browsersync-webpack-plugin');
 
-const BSYNC_PROXY_URL = 'http://localhost:3000/@dist/';
+const BSYNC_PROXY_URL = 'http://localhost:3000/assets/';
 const JEKYLL_TARGET_URL = 'http://127.0.0.1:4000/';
 
 module.exports = {

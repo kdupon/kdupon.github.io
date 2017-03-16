@@ -5,103 +5,103 @@ tagline:  Two wonderful weeks on the Emerald Isle.
 date:   2017-02-09 17:57:12 -0500
 categories: explore-roam
 
-image_src_01: /assets/uploads/photos/explore/ireland/Ireland_Biking.jpg
+image_src_01: /assets/images/explore/ireland/Ireland_Biking.jpg
 image_alt_01: Ireland Biking
 
-image_src_02: /assets/uploads/photos/explore/ireland/Ireland_Castle.jpg
+image_src_02: /assets/images/explore/ireland/Ireland_Castle.jpg
 image_alt_02: Ireland Castle
 
-image_src_03: /assets/uploads/photos/explore/ireland/Ireland_Cliffs-Mohr.jpg
+image_src_03: /assets/images/explore/ireland/Ireland_Cliffs-Mohr.jpg
 image_alt_03: Ireland Cliffs of Mohr
 
-image_src_04: /assets/uploads/photos/explore/ireland/Ireland_Cliffs-Mohr_02.jpg
+image_src_04: /assets/images/explore/ireland/Ireland_Cliffs-Mohr_02.jpg
 image_alt_04: Ireland Cliffs of Mohr
 
-image_src_05: /assets/uploads/photos/explore/ireland/Ireland_Cliffs-Mohr_03.jpg
+image_src_05: /assets/images/explore/ireland/Ireland_Cliffs-Mohr_03.jpg
 image_alt_05: Ireland Cliffs of Mohr
 
-image_src_06: /assets/uploads/photos/explore/ireland/Ireland_Copper-Room.jpg
+image_src_06: /assets/images/explore/ireland/Ireland_Copper-Room.jpg
 image_alt_06: Ireland Limerick Copper Room
 
-image_src_07: /assets/uploads/photos/explore/ireland/Ireland_Cows.jpg
+image_src_07: /assets/images/explore/ireland/Ireland_Cows.jpg
 image_alt_07: Ireland Fields & Cows
 
-image_src_08: /assets/uploads/photos/explore/ireland/Ireland_Dingle.jpg
+image_src_08: /assets/images/explore/ireland/Ireland_Dingle.jpg
 image_alt_08: Ireland Dingle
 
-image_src_09: /assets/uploads/photos/explore/ireland/Ireland_Dingle_02.jpg
+image_src_09: /assets/images/explore/ireland/Ireland_Dingle_02.jpg
 image_alt_09: Ireland Dingle
 
-image_src_10: /assets/uploads/photos/explore/ireland/Ireland_Dingle_03.jpg
+image_src_10: /assets/images/explore/ireland/Ireland_Dingle_03.jpg
 image_alt_10: Ireland Dingle
 
-image_src_11: /assets/uploads/photos/explore/ireland/Ireland_Dublin-Dinner.jpg
+image_src_11: /assets/images/explore/ireland/Ireland_Dublin-Dinner.jpg
 image_alt_11: Ireland Dublin Dinner
 
-image_src_12: /assets/uploads/photos/explore/ireland/Ireland_Dublin-Hotel.jpg
+image_src_12: /assets/images/explore/ireland/Ireland_Dublin-Hotel.jpg
 image_alt_12: Ireland Dublin Hotel
 
-image_src_13: /assets/uploads/photos/explore/ireland/Ireland_Dublin.jpg
+image_src_13: /assets/images/explore/ireland/Ireland_Dublin.jpg
 image_alt_13: Ireland Dublin
 
-image_src_14: /assets/uploads/photos/explore/ireland/Ireland_Farmhouse.jpg
+image_src_14: /assets/images/explore/ireland/Ireland_Farmhouse.jpg
 image_alt_14: Ireland Farmhouse
 
-image_src_15: /assets/uploads/photos/explore/ireland/Ireland_Gap-Dunloe.jpg
+image_src_15: /assets/images/explore/ireland/Ireland_Gap-Dunloe.jpg
 image_alt_15: Ireland Gap of Dunloe
 
-image_src_16: /assets/uploads/photos/explore/ireland/Ireland_Guinness.jpg
+image_src_16: /assets/images/explore/ireland/Ireland_Guinness.jpg
 image_alt_16: Ireland Guinness
 
-image_src_17: /assets/uploads/photos/explore/ireland/Ireland_Guinness_02.jpg
+image_src_17: /assets/images/explore/ireland/Ireland_Guinness_02.jpg
 image_alt_17: Ireland Guinness
 
-image_src_18: /assets/uploads/photos/explore/ireland/Ireland_Guinness_03.jpg
+image_src_18: /assets/images/explore/ireland/Ireland_Guinness_03.jpg
 image_alt_18: Ireland Guinness
 
-image_src_19: /assets/uploads/photos/explore/ireland/Ireland_Island.jpg
+image_src_19: /assets/images/explore/ireland/Ireland_Island.jpg
 image_alt_19: Ireland Island View
 
-image_src_20: /assets/uploads/photos/explore/ireland/Ireland_Killarney-Lakes.jpg
+image_src_20: /assets/images/explore/ireland/Ireland_Killarney-Lakes.jpg
 image_alt_20: Ireland Killarney Lakes
 
-image_src_21: /assets/uploads/photos/explore/ireland/Ireland_Leather-Bracelet.jpg
+image_src_21: /assets/images/explore/ireland/Ireland_Leather-Bracelet.jpg
 image_alt_21: Ireland Leather Bracelet
 
-image_src_22: /assets/uploads/photos/explore/ireland/Ireland_Oceanview.jpg
+image_src_22: /assets/images/explore/ireland/Ireland_Oceanview.jpg
 image_alt_22: Ireland Oceanview
 
-image_src_23: /assets/uploads/photos/explore/ireland/Ireland_Oceanview_02.jpg
+image_src_23: /assets/images/explore/ireland/Ireland_Oceanview_02.jpg
 image_alt_23: Ireland Oceanview
 
-image_src_24: /assets/uploads/photos/explore/ireland/Ireland_Rental-Car.jpg
+image_src_24: /assets/images/explore/ireland/Ireland_Rental-Car.jpg
 image_alt_24: Ireland Rental Car
 
-image_src: /assets/uploads/photos/explore/ireland/Ireland_Rolling-Hills.jpg
+image_src: /assets/images/explore/ireland/Ireland_Rolling-Hills.jpg
 image_alt: Ireland Rolling Hills
 
-image_src_26: /assets/uploads/photos/explore/ireland/Ireland_Sheep.jpg
+image_src_26: /assets/images/explore/ireland/Ireland_Sheep.jpg
 image_alt_26: Ireland Sheep
 
-image_src_27: /assets/uploads/photos/explore/ireland/Ireland_Sheep_02.jpg
+image_src_27: /assets/images/explore/ireland/Ireland_Sheep_02.jpg
 image_alt_27: Ireland Sheep
 
-image_src_28: /assets/uploads/photos/explore/ireland/Ireland_St-Patricks.jpg
+image_src_28: /assets/images/explore/ireland/Ireland_St-Patricks.jpg
 image_alt_28: Ireland St Patricks Cathedral
 
-image_src_29: /assets/uploads/photos/explore/ireland/Ireland_Whiskey-Bar.jpg
+image_src_29: /assets/images/explore/ireland/Ireland_Whiskey-Bar.jpg
 image_alt_29: Ireland Whiskey Bar
 
-image_src_30: /assets/uploads/photos/explore/ireland/Ireland_Whiskey-Bar_02.jpg
+image_src_30: /assets/images/explore/ireland/Ireland_Whiskey-Bar_02.jpg
 image_alt_30: Ireland Whiskey Bar
 
-image_src_31: /assets/uploads/photos/explore/ireland/Ireland_Wishing-Tree.jpg
+image_src_31: /assets/images/explore/ireland/Ireland_Wishing-Tree.jpg
 image_alt_31: Ireland Wishing Tree
 
-image_src_32: /assets/uploads/photos/explore/ireland/Ireland_Cliffs-Mohr_04.jpg
+image_src_32: /assets/images/explore/ireland/Ireland_Cliffs-Mohr_04.jpg
 image_alt_32: Ireland Cliffs of Mohr
 
-image_src_33: /assets/uploads/photos/explore/ireland/Ireland_Galway-Hotel.jpg
+image_src_33: /assets/images/explore/ireland/Ireland_Galway-Hotel.jpg
 image_alt_33: Ireland Galway Hotel
 
 ---

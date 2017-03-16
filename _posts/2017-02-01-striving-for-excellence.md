@@ -4,7 +4,7 @@ title:  "Striving for excellence in a world of \"good enough\"."
 tagline:  Let’s ban mediocrity for life and set an expectation of greatness.
 date:   2017-02-01 17:57:12 -0500
 categories: design-strategize
-image_src: /assets/uploads/photos/create/Quote_Striving.png
+image_src: /assets/images/create/Quote_Striving.png
 image_alt: I didn't come this far, to only come this far.
 
 ---

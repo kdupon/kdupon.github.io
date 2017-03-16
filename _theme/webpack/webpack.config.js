@@ -12,10 +12,23 @@ const settings = require('./settings');
 const sourceMapQueryStr = (settings.env.production) ? '+sourceMap' : '-sourceMap';
 
 let WEBPACK_CONFIG = {
+  // System settings
+  context: process.cwd(),
+  devtool: (settings.env.development ? '#source-map' : undefined),
+  resolve: {
+    enforceExtension: false,
+    modules: [ 
+      '_theme/src', 
+      'node_modules', 
+    ],
+  },
+  resolveLoader: {
+    moduleExtensions: ['-loader'],
+  },
   entry: {
     main: [
-      './@src/main/main.js',
-      './@src/main/main.scss',
+      './_theme/src/main/main.js',
+      './_theme/src/main/main.scss',
     ],
     // search: [
     //   './@src/search/search.js',
@@ -23,14 +36,14 @@ let WEBPACK_CONFIG = {
     vendor: [
       'bootstrap',
       'masonry-layout',
-      './@src/vendor/vendor.js',
-      './@src/vendor/vendor.scss',
+      './_theme/src/vendor/vendor.js',
+      './_theme/src/vendor/vendor.scss',
     ],
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(process.cwd(), '@dist'),
-    publicPath: '/@dist/',
+    path: path.resolve(process.cwd(), 'assets'),
+    publicPath: '/assets/',
   },
   module: {
     rules: [
@@ -60,20 +73,6 @@ let WEBPACK_CONFIG = {
       filename: '[name].css',
     }),
   ],
-
-  // System settings
-  context: process.cwd(),
-  devtool: (settings.env.development ? '#source-map' : undefined),
-  resolve: {
-    alias: {
-      'masonry': 'masonry-layout',
-    },
-    enforceExtension: false,
-    modules: [ path.resolve(process.cwd(), '@src'), 'node_modules' ],
-  },
-  resolveLoader: {
-    moduleExtensions: ['-loader'],
-  },
 };
 
 // Add Bootstrap's dependencies
@@ -81,28 +80,12 @@ WEBPACK_CONFIG.plugins.push(
   new webpack.ProvidePlugin({
     $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery',
     Tether: 'tether', 'window.Tether': 'tether',
-    isotope: 'isotope-layout',
-    masonry: 'masonry',
+    masonry: 'masonry-layout',
   })
 );
 
-// if (settings.env.development) {
-//   WEBPACK_CONFIG.entry.runtime = [
-//     './@src/config/env/dev.js',
-//     './@src/config/env/dev.scss',
-//   ];
-// }
-
-// if (settings.env.production) {
-//   WEBPACK_CONFIG.entry.runtime = [
-//     './@src/config/env/prod.js',
-//     './@src/config/env/prod.scss',
-//   ];
-// }
-
 if (settings.enabled.watcher) {
   WEBPACK_CONFIG.entry = require('./addons/addHotMiddleware')(WEBPACK_CONFIG.entry);
-  // WEBPACK_CONFIG.entry.search.unshift('react-hot-loader/patch');
   WEBPACK_CONFIG = merge(WEBPACK_CONFIG, require('./webpack.config.watch'));
 }
 
