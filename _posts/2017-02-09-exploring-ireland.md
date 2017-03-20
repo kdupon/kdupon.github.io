@@ -109,7 +109,7 @@ image_alt_33: Ireland Galway Hotel
 ![{{ page.image_alt }}]({{ page.image_src }})
 
 ### Ireland is a fantastic country.
-The scenery is just breathtaking, the people are full of life, and there is a ton of things to do. I took a ten day trip to Ireland in May with one of my favorite people and we loved everything about the entire experience. I highly recommend making the journey to the Emerald Island; you’ll have a fantastic time! I love Ireland because you are so disconnected from everything else in the world that you can simply **soak in the beauty around you**. I’ve put together the tips and highlights from our trip and my recommendations for how to spend your time.
+The scenery is just breathtaking, the people are full of life, and there are a ton of things to do. I took a ten day trip to Ireland in May with one of my favorite people and we loved everything about the entire experience. I highly recommend making the journey to the Emerald Island; you’ll have a fantastic time! I love Ireland because you are so disconnected from everything else in the world that you can simply **soak in the beauty around you**. I’ve put together the tips and highlights from our trip and my recommendations for how to spend your time.
 
 ### Things to Know
 
@@ -325,5 +325,5 @@ Spend just as long if not longer in Killarney, we were there for a week and we c
 We wish we would have gone horseback riding! We kept talking about riding horses through some of the nature trails, but we ran out of time.
 
 ### Simply on of the best trips I've ever taken.
-I loved everything about Ireland, it was a fantastic trip and I got to spend a ton of time with one of my favorite friends.
+I loved everything about Ireland, it was a fantastic trip and I got to spend a ton of time with one of my favorite friends.<br>
 ![{{ page.image_alt_11}}]({{ page.image_src_11 }})
