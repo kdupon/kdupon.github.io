@@ -10,7 +10,6 @@ module.exports = {
     publicPath: BSYNC_PROXY_URL,
   },
   devtool: '#cheap-module-source-map',
-  // stats: false,
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -25,7 +24,7 @@ module.exports = {
       ],
       advanced: {
         browserSync: {
-          browser: 'Google Chrome',
+          open: false
         },
       },
     }),

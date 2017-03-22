@@ -14,17 +14,6 @@ const sourceMapQueryStr = (settings.env.production) ? '+sourceMap' : '-sourceMap
 let WEBPACK_CONFIG = {
   // System settings
   context: process.cwd(),
-  devtool: (settings.env.development ? '#source-map' : undefined),
-  resolve: {
-    enforceExtension: false,
-    modules: [ 
-      '_theme/src', 
-      'node_modules', 
-    ],
-  },
-  resolveLoader: {
-    moduleExtensions: ['-loader'],
-  },
   entry: {
     main: [
       './_theme/src/main/main.js',
@@ -45,22 +34,38 @@ let WEBPACK_CONFIG = {
     path: path.resolve(process.cwd(), 'assets'),
     publicPath: '/assets/',
   },
+  resolve: {
+    enforceExtension: false,
+    modules: [ 
+      '_theme/src', 
+      'node_modules', 
+    ],
+  },
+  resolveLoader: {
+    moduleExtensions: ['-loader'],
+  },
+  devtool: (settings.env.development ? '#source-map' : undefined),
+  watchOptions: {
+    ignored: /node_modules/,
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        use: [
+          { loader: 'babel' },
+        ],
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style',
-          loader: [
-            `css?${sourceMapQueryStr}`,
-            `resolve-url?${sourceMapQueryStr}`,
-            `sass?${sourceMapQueryStr}`,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style',
+          use: [
+            { loader: `css?${sourceMapQueryStr}` },
+            { loader: `resolve-url?${sourceMapQueryStr}` },
+            { loader: `sass?${sourceMapQueryStr}` },
           ],
         }),
       },
@@ -72,17 +77,13 @@ let WEBPACK_CONFIG = {
       disable: settings.enabled.watcher,
       filename: '[name].css',
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery', jQuery: 'jquery', // 'window.jQuery': 'jquery',
+      Tether: 'tether', 'window.Tether': 'tether',
+      masonry: 'masonry-layout',
+    })
   ],
 };
-
-// Add Bootstrap's dependencies
-WEBPACK_CONFIG.plugins.push(
-  new webpack.ProvidePlugin({
-    $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery',
-    Tether: 'tether', 'window.Tether': 'tether',
-    masonry: 'masonry-layout',
-  })
-);
 
 if (settings.enabled.watcher) {
   WEBPACK_CONFIG.entry = require('./addons/addHotMiddleware')(WEBPACK_CONFIG.entry);
