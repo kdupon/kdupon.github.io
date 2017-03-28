@@ -1,7 +1,10 @@
 import Masonry from 'masonry-layout';
+import imagesLoaded from 'imagesloaded';
+
+imagesLoaded.makeJQueryPlugin($);
 
 if ($('.card-masonry').length) {
-  var masonry = new Masonry('.card-masonry', {
+  const masonry = new Masonry('.card-masonry', {
     columnWidth: '.card-col',
     itemSelector: '.card-col',
     percentPosition: true,
@@ -11,4 +14,8 @@ if ($('.card-masonry').length) {
   setTimeout(() => {
     masonry.layout();
   }, 0);
+
+  $('.card-masonry').imagesLoaded()
+    .progress(() => { masonry.layout(); })
+    .always(() => { masonry.layout(); });
 }

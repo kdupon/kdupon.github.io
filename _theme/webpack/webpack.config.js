@@ -8,9 +8,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const settings = require('./settings');
 
-// Configuration settings
-const sourceMapQueryStr = (settings.env.production) ? '+sourceMap' : '-sourceMap';
-
 let WEBPACK_CONFIG = {
   // System settings
   context: process.cwd(),
@@ -23,8 +20,6 @@ let WEBPACK_CONFIG = {
     //   './@src/search/search.js',
     // ],
     vendor: [
-      'bootstrap',
-      'masonry-layout',
       './_theme/src/vendor/vendor.js',
       './_theme/src/vendor/vendor.scss',
     ],
@@ -44,7 +39,7 @@ let WEBPACK_CONFIG = {
   resolveLoader: {
     moduleExtensions: ['-loader'],
   },
-  devtool: (settings.env.development ? '#source-map' : undefined),
+  devtool: '#source-map', // (settings.env.development ? '#source-map' : undefined),
   watchOptions: {
     ignored: /node_modules/,
   },
@@ -63,9 +58,9 @@ let WEBPACK_CONFIG = {
         use: ExtractTextPlugin.extract({
           fallback: 'style',
           use: [
-            { loader: `css?${sourceMapQueryStr}` },
-            { loader: `resolve-url?${sourceMapQueryStr}` },
-            { loader: `sass?${sourceMapQueryStr}` },
+            { loader: `css` },
+            { loader: `resolve-url` },
+            { loader: `sass` },
           ],
         }),
       },
@@ -80,7 +75,6 @@ let WEBPACK_CONFIG = {
     new webpack.ProvidePlugin({
       $: 'jquery', jQuery: 'jquery', // 'window.jQuery': 'jquery',
       Tether: 'tether', 'window.Tether': 'tether',
-      masonry: 'masonry-layout',
     })
   ],
 };

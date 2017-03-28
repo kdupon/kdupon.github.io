@@ -18,45 +18,48 @@ layout: default
   </div>
 {% endunless %}
 
-<div class="container" hidden>
-  <nav><a href="">< Back</a></nav>
-</div>
-
+<nav class="pb-2 mb-4"><a href="{{ "/create-eat/" | relative_url }}">&lsaquo;&emsp;View all Create &amp; Eat</a></nav>
 <div class="recipe-layout container">
   <h2 class="recipe-title">{{ page.title }}</h2>
   <p class="recipe-description">{{ page.description }}</p>
   <div class="recipe-content">{{ content }}</div>
-  <div class="recipe-details d-flex justify-content-between">
+  
+  {% unless page.oven_temperature %}
+  <div class="recipe-details recipe-details-3">
+  {% endunless %}
+  {% if page.oven_temperature %}
+  <div class="recipe-details recipe-details-4">
+  {% endif %}
     <div class="detail">
-      <div class="icon pr-3">{% include icons/Icon_Cooking-Time.svg %}</div>
+      <div class="icon">{% include icons/Icon_Cooking-Time.svg %}</div>
       <div class="info">
-        <div class="value mb-1">{{ page.total_time }}</div>
-        <h3 class="label mb-0">Total Time</h3>
+        <div class="value">{{ page.total_time }}</div>
+        <h3 class="label">Total Time</h3>
       </div>
     </div>
 
     <div class="detail">
-      <div class="icon pr-3">{% include icons/Icon_Servings.svg %}</div>
+      <div class="icon">{% include icons/Icon_Servings.svg %}</div>
       <div class="info">
-        <div class="value mb-1">{{ page.servings }}</div>
-        <h3 class="label mb-0">Servings</h3>
+        <div class="value">{{ page.servings }}</div>
+        <h3 class="label">Servings</h3>
       </div>
     </div>
 
     <div class="detail">
-      <div class="icon pr-3">{% include icons/Icon_Skill-Set.svg %}</div>
+      <div class="icon">{% include icons/Icon_Skill-Set.svg %}</div>
       <div class="info">
-        <div class="value mb-1">{{ page.skill_level }}</div>
-        <h3 class="label mb-0">Skill Level</h3>
+        <div class="value">{{ page.skill_level }}</div>
+        <h3 class="label">Skill Level</h3>
       </div>
     </div>
 
     {% if page.oven_temperature %}
     <div class="detail">
-      <div class="icon pr-3">{% include icons/Icon_Temperature.svg %}</div>
+      <div class="icon">{% include icons/Icon_Temperature.svg %}</div>
       <div class="info">
-        <div class="value mb-1">{{ page.oven_temperature }}</div>
-        <h3 class="label mb-0">Oven Temperature</h3>
+        <div class="value">{{ page.oven_temperature }}</div>
+        <h3 class="label">Oven Temperature</h3>
       </div>
     </div>
     {% endif %}

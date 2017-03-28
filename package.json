@@ -51,7 +51,8 @@
   },
   "homepage": "https://github.com/kdupon/kdupon.github.io#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "twbs/bootstrap#78fc4d23fcefe31397444b75f43728c38e13c590",
+    "imagesloaded": "^4.1.1",
     "masonry-layout": "^4.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"

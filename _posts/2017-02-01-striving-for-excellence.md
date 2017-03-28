@@ -9,7 +9,7 @@ image_alt: I didn't come this far, to only come this far.
 
 ---
 
-![{{ page.image_alt }}]({{ page.image_src }})
+{% include components/img/full.html src=page.image_src alt=page.image_alt %}
 
 ### Why do details matter?
 Have you ever seen a sentence, a website, or a product and had a feeling that something wasn’t quite right? You can’t quite place your finger on the issue, but there is a distracting feeling somewhere in the experience. Odds are, details are causing you to miss out on the optimal experience.

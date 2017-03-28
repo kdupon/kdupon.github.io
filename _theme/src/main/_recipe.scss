@@ -1,6 +1,10 @@
 .recipe-layout {
   background-color: #fff;
-  padding: $spacer * 3;
+  padding: ($spacer * 3) $spacer;
+
+  @include media-breakpoint-up(md) {
+    padding: $spacer * 3;
+  }
 
   .recipe-title {
     font-family: font-get(PlayfairDisplay);
@@ -26,10 +30,50 @@
 
   .recipe-details {
     font-family: font-get(PlayfairDisplay);
-    margin-bottom: $spacer * 3;
+    margin-bottom: $spacer * 1.5;
 
-    .details {
-      display: table;
+    display: flex;
+    flex-wrap: wrap;
+ 
+    .detail {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    &-3 {
+      justify-content: space-between;
+
+      @include media-breakpoint-up(xl) {
+        justify-content: flex-start;
+      }
+
+      .detail {
+        @include media-breakpoint-up(lg) {
+          flex: 0 0 auto;
+          max-width: auto;
+        }
+
+        @include media-breakpoint-up(xl) {
+          flex: 0 0 auto;
+          margin-right: 6rem;
+        }
+      }
+    }
+
+    &-4 {
+      justify-content: space-between;
+      
+      .detail {
+        @include media-breakpoint-up(md) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        @include media-breakpoint-up(xl) {
+          flex: 0 0 auto;
+        }
+      }
     }
 
     .icon,
@@ -40,6 +84,7 @@
 
     svg {
         display: block;
+        margin-right: 1rem;
         width: 2rem;
     }
 

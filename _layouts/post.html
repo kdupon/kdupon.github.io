@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+
+{% for category in page.categories %}
+  {% if category == "design-strategize" %}
+    <nav class="pb-2 mb-4"><a href="{{ "/design-strategize/" | relative_url }}">&lsaquo;&emsp;View all Design &amp; Strategize </a></nav>
+  {% endif %}
+  {% if category == "explore-roam" %}
+    <nav class="pb-2 mb-4"><a href="{{ "/explore-roam/" | relative_url }}">&lsaquo;&emsp;View all Explore &amp; Roam</a></nav>
+  {% endif %}
+{% endfor %}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>

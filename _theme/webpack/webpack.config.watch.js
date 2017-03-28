@@ -24,7 +24,7 @@ module.exports = {
       ],
       advanced: {
         browserSync: {
-          open: false
+          open: false,
         },
       },
     }),

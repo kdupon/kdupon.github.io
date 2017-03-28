@@ -98,7 +98,7 @@ $red:    #d9534f;
 $orange: #f0ad4e;
 $yellow: #ffd500;
 $green:  #5cb85c;
-$blue:   #48A8A9;
+$blue:   #0275d8;
 $teal:   #48A8A9;
 $pink:   #ff5b77;
 $purple: #613d7c;
@@ -138,36 +138,15 @@ $enable-print-styles:       true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   1rem;
-$spacer-x: $spacer;
-$spacer-y: $spacer;
+$spacer: 1rem;
 $spacers: (
-  0: (
-    x: 0,
-    y: 0
-  ),
-  1: (
-    x: ($spacer-x * .25),
-    y: ($spacer-y * .25)
-  ),
-  2: (
-    x: ($spacer-x * .5),
-    y: ($spacer-y * .5)
-  ),
-  3: (
-    x: $spacer-x,
-    y: $spacer-y
-  ),
-  4: (
-    x: ($spacer-x * 1.5),
-    y: ($spacer-y * 1.5)
-  ),
-  5: (
-    x: ($spacer-x * 3),
-    y: ($spacer-y * 3)
-  )
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
 );
-$border-width: 1px;
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
@@ -183,9 +162,6 @@ $sizes: (
 
 $body-bg:       #f8f8f8;
 $body-color:    $gray-dark;
-$inverse-bg:    $gray-dark;
-$inverse-color: $gray-lighter;
-
 
 // Links
 //
@@ -240,17 +216,40 @@ $grid-gutter-widths: (
   xl: $grid-gutter-width-base
 );
 
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:         (4 / 3);
+$line-height-sm:         1.5;
+
+$border-width: 1px;
+
+$border-radius:          .25rem;
+$border-radius-lg:       .3rem;
+$border-radius-sm:       .2rem;
+
+$component-active-color: $white;
+$component-active-bg:    $brand-primary;
+
+$caret-width:            .3em;
+
+$transition-base:        all .2s ease-in-out;
+$transition-fade:        opacity .15s linear;
+$transition-collapse:    height .35s ease;
+
+
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif: font-get(Lato);
-$font-family-serif:      font-get(PlayfairDisplay);
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:       $font-family-sans-serif;
 
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg:   1rem;
+$font-size-lg:   1.25rem;
 $font-size-sm:   .875rem;
 $font-size-xs:   .75rem;
 
@@ -260,12 +259,12 @@ $font-weight-bold: bold;
 $font-weight-base: 300;
 $line-height-base: 1.5;
 
-$font-size-h1: 2.5rem !default;
-$font-size-h2: 2rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
-$font-size-h6: 1rem !default;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
 
 $headings-margin-bottom: ($spacer / 2);
 $headings-font-family:   font-get(PlayfairDisplay);
@@ -291,8 +290,6 @@ $small-font-size: 80%;
 
 $text-muted: $gray-light;
 
-$abbr-border-color: $gray-light;
-
 $blockquote-small-color:  $gray-light;
 $blockquote-font-size:    ($font-size-base * 1.25);
 $blockquote-border-color: $gray-lighter;
@@ -311,27 +308,6 @@ $nested-kbd-font-weight: $font-weight-bold;
 $list-inline-padding: 5px;
 
 
-// Components
-//
-// Define common padding and border radius sizes and more.
-
-$line-height-lg:         1.45;
-$line-height-sm:         1.5;
-
-$border-radius:          0;
-$border-radius-lg:       0;
-$border-radius-sm:       0;
-
-$component-active-color: $white;
-$component-active-bg:    $brand-primary;
-
-$caret-width:            .3em;
-
-$transition-base:        all .2s ease-in-out;
-$transition-fade:        opacity .15s linear;
-$transition-collapse:    height .35s ease;
-
-
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
@@ -340,19 +316,22 @@ $table-cell-padding:            .75rem;
 $table-sm-cell-padding:         .3rem;
 
 $table-bg:                      transparent;
-
-$table-inverse-bg:              $gray-dark;
-$table-inverse-color:           $body-bg;
-
 $table-bg-accent:               rgba($black,.05);
 $table-bg-hover:                rgba($black,.075);
 $table-bg-active:               $table-bg-hover;
 
+$table-border-width:            $border-width;
+$table-border-color:            $gray-lighter;
+
 $table-head-bg:                 $gray-lighter;
 $table-head-color:              $gray;
 
-$table-border-width:            $border-width;
-$table-border-color:            $gray-lighter;
+$table-inverse-bg:              $gray-dark;
+$table-inverse-bg-accent:       rgba($white, .05);
+$table-inverse-bg-hover:        rgba($white, .075);
+$table-inverse-bg-active:       $table-inverse-bg-hover;
+$table-inverse-border:          lighten($gray-dark, 7.5%);
+$table-inverse-color:           $body-bg;
 
 
 // Buttons
@@ -400,7 +379,6 @@ $btn-padding-x-lg:               1.5rem;
 $btn-padding-y-lg:               .75rem;
 
 $btn-block-spacing-y:            .5rem;
-$btn-toolbar-margin:             .5rem;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:              0;
@@ -457,7 +435,7 @@ $form-check-input-margin-x: .25rem;
 
 $form-check-inline-margin-x: .75rem;
 
-$form-group-margin-bottom:       $spacer-y;
+$form-group-margin-bottom:       1rem;
 
 $input-group-addon-bg:           $gray-lighter;
 $input-group-addon-border-color: $input-border-color;
@@ -469,7 +447,6 @@ $custom-control-spacer-x: 1rem;
 $custom-control-spacer-y: .25rem;
 
 $custom-control-indicator-size:       1rem;
-$custom-control-indicator-margin-y:   (($line-height-base * 1rem) - $custom-control-indicator-size) / -2;
 $custom-control-indicator-bg:         #ddd;
 $custom-control-indicator-bg-size:    50% 50%;
 $custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba($black,.1);
@@ -517,7 +494,6 @@ $custom-select-border-radius: $border-radius;
 $custom-select-focus-border-color: lighten($brand-primary, 25%);
 $custom-select-focus-box-shadow:   inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5);
 
-$custom-select-sm-padding-y:  .2rem;
 $custom-select-sm-font-size:  75%;
 
 $custom-file-height:           2.5rem;
@@ -553,7 +529,7 @@ $form-icon-warning-color: $brand-warning;
 $form-icon-warning: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$form-icon-warning-color}' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E"), "#", "%23");
 
 $form-icon-danger-color: $brand-danger;
-$form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-icon-danger-color}' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"), "#", "%23");
+$form-icon-danger: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-icon-danger-color}' viewBox='-2 -2 7 7'%3E%3Cpath stroke='#{$form-icon-danger-color}' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E"), "#", "%23");
 
 
 // Dropdowns
@@ -589,23 +565,18 @@ $dropdown-header-color:          $gray-light;
 // of components dependent on the z-axis and are designed to all work together.
 
 $zindex-dropdown-backdrop:  990;
-$zindex-navbar:             1000;
 $zindex-dropdown:           1000;
+$zindex-sticky:             1020;
 $zindex-fixed:              1030;
-$zindex-sticky:             1030;
 $zindex-modal-backdrop:     1040;
 $zindex-modal:              1050;
 $zindex-popover:            1060;
 $zindex-tooltip:            1070;
 
-
 // Navbar
 
-$navbar-border-radius:              $border-radius;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);
-
-$navbar-brand-padding-y:            .25rem;
 
 $navbar-toggler-padding-x:           .75rem;
 $navbar-toggler-padding-y:           .25rem;
@@ -616,33 +587,28 @@ $navbar-inverse-color:                 rgba($white,.5);
 $navbar-inverse-hover-color:           rgba($white,.75);
 $navbar-inverse-active-color:          rgba($white,1);
 $navbar-inverse-disabled-color:        rgba($white,.25);
-$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
 $navbar-inverse-toggler-border:        rgba($white,.1);
 
 $navbar-light-color:                rgba($black,.5);
 $navbar-light-hover-color:          rgba($black,.7);
 $navbar-light-active-color:         rgba($black,.9);
 $navbar-light-disabled-color:       rgba($black,.3);
-$navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
 $navbar-light-toggler-border:       rgba($black,.1);
 
 // Navs
 
-$nav-item-margin:               .2rem;
-$nav-item-inline-spacer:        1rem;
 $nav-link-padding:              .5em 1em;
-$nav-link-hover-bg:             $gray-lighter;
 $nav-disabled-link-color:       $gray-light;
 
 $nav-tabs-border-color:                       #ddd;
 $nav-tabs-border-width:                       $border-width;
 $nav-tabs-border-radius:                      $border-radius;
 $nav-tabs-link-hover-border-color:            $gray-lighter;
-$nav-tabs-active-link-hover-color:            $gray;
-$nav-tabs-active-link-hover-bg:               $body-bg;
-$nav-tabs-active-link-hover-border-color:     #ddd;
-$nav-tabs-justified-link-border-color:        #ddd;
-$nav-tabs-justified-active-link-border-color: $body-bg;
+$nav-tabs-active-link-color:                  $gray;
+$nav-tabs-active-link-bg:                     $body-bg;
+$nav-tabs-active-link-border-color:           #ddd;
 
 $nav-pills-border-radius:     $border-radius;
 $nav-pills-active-link-color: $component-active-color;
@@ -823,7 +789,7 @@ $modal-transition:            transform .3s ease-out;
 
 $alert-padding-x:             1.25rem;
 $alert-padding-y:             .75rem;
-$alert-margin-bottom:         $spacer-y;
+$alert-margin-bottom:         1rem;
 $alert-border-radius:         $border-radius;
 $alert-link-font-weight:      $font-weight-bold;
 $alert-border-width:          $border-width;
@@ -871,14 +837,11 @@ $list-group-hover-bg:            $gray-lightest;
 $list-group-active-color:        $component-active-color;
 $list-group-active-bg:           $component-active-bg;
 $list-group-active-border:       $list-group-active-bg;
-$list-group-active-text-color:   lighten($list-group-active-bg, 50%);
 
 $list-group-disabled-color:      $gray-light;
 $list-group-disabled-bg:         $list-group-bg;
-$list-group-disabled-text-color: $list-group-disabled-color;
 
 $list-group-link-color:          $gray;
-$list-group-link-heading-color:  $gray-dark;
 $list-group-link-hover-color:    $list-group-link-color;
 
 $list-group-link-active-color:   $list-group-color;
@@ -943,7 +906,6 @@ $close-font-weight:           $font-weight-bold;
 $close-color:                 $black;
 $close-text-shadow:           0 1px 0 $white;
 
-
 // Code
 
 $code-font-size:              90%;
@@ -955,7 +917,5 @@ $code-bg:                     $gray-lightest;
 $kbd-color:                   $white;
 $kbd-bg:                      $gray-dark;
 
-$pre-bg:                      $gray-lightest;
 $pre-color:                   $gray-dark;
-$pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;

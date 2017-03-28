@@ -6,11 +6,25 @@
 
   a {
     color: #FFF;
+    display: block;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: .5rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      display: inline;
+      margin-bottom: 0;
+      width: auto;
+    }
 
     @include hover-focus {
       color: #48A8A9;
     }
   }
 }
+
