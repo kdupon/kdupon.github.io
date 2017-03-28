@@ -20,6 +20,7 @@ let WEBPACK_CONFIG = {
     //   './@src/search/search.js',
     // ],
     vendor: [
+      'bootstrap',
       './_theme/src/vendor/vendor.js',
       './_theme/src/vendor/vendor.scss',
     ],
