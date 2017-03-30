@@ -4,6 +4,7 @@ title:  "Exploring Ireland"
 tagline:  Two wonderful weeks on the Emerald Isle.
 date:   2017-02-09 17:57:12 -0500
 categories: explore-roam
+featured: true
 
 image_src_01: /assets/images/explore/ireland/Ireland_Biking.jpg
 image_alt_01: Ireland Biking

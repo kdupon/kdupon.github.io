@@ -13,7 +13,7 @@ layout: base
 <main class="home w-100 pt-5">
   <div class="container-fluid">
     <div class="card-masonry mb-5">
-    {% for entity in entities limit:8 %}
+    {% for entity in entities %}
     {% if entity.featured %}
       <div class="card-col mb-4">
         <div class="card">
@@ -23,6 +23,9 @@ layout: base
           <div class="card-block">
             <h3 class="card-title h5">{{ entity.title }}</h3>
             <p class="card-text">{{ entity.description }}</p>
+            {% if entity.tagline %}
+            <p class="card-text">{{ entity.tagline }}</p>
+            {% endif %}
             <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
           </div>
         </div>
@@ -31,7 +34,7 @@ layout: base
     {% endfor %}
     </div>
     <div class="view-all w-100 text-center pb-4 mb-5">
-      <a href="" class="btn btn-primary">View all Posts</a>
+      <a href="/entities" class="btn btn-primary">View all Posts</a>
     </div>
   </div>
   <div class="container-fluid">
