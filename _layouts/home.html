@@ -10,24 +10,37 @@ layout: base
   {% endfor %}
 {% assign entities = (entities | sort: "date") | reverse %}
 
-<main class="home container-fluid w-100">
-  <!--<div class="card-columns" style="column-count: 4; column-gap: 30px">
-  {% for entity in entities %}
-    <div class="card" style="margin-bottom: 30px;">
-      <div class="card-block">
-        <h3 class="card-title">{{ entity.title }}</h3>
-        <h6 class="card-subtitle mb-3 text-muted">{{ entity.date | date: "%m.%d.%y"}} {% for tag in entity.tags %} &middot; {{ tag }} {% endfor %}</h6>
-        <p class="card-text">{{ entity.description }}</p>
-        <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+<main class="home w-100 pt-5">
+  <div class="container-fluid">
+    <div class="card-masonry mb-5">
+    {% for entity in entities %}
+    {% if entity.featured %}
+      <div class="card-col mb-4">
+        <div class="card">
+          {% if entity.image_src %}
+          <img class="card-img-top" src="{{ entity.image_src }}" alt="{{ entity.image_src }}">
+          {% endif %}
+          <div class="card-block">
+            <h3 class="card-title h5">{{ entity.title }}</h3>
+            <p class="card-text">{{ entity.description }}</p>
+            {% if entity.tagline %}
+            <p class="card-text">{{ entity.tagline }}</p>
+            {% endif %}
+            <a href="{{ entity.url }}" class="btn btn-primary">Read</a>
+          </div>
+        </div>
       </div>
+    {% endif %}
+    {% endfor %}
     </div>
-  {% endfor %}
-  </div>-->
-
-  <img class="hero-outlet" src="/assets/images/KD_Homepage_01.jpg" alt="Kate Dupon Ireland Trip"/>
-
-  <div class="row">
-    {% include components/resume.html %}
-    {% include components/contact-form.html %}
+    <div class="view-all w-100 text-center pb-4 mb-5">
+      <a href="/entities" class="btn btn-primary">View all Posts</a>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      {% include components/resume.html %}
+      {% include components/contact-form.html %}
+    </div>
   </div>
 </main>

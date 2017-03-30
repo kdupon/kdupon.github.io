@@ -2,12 +2,12 @@
 layout: post
 title:  "Cultivating Empathy"
 tagline:  Remember the humans.
-excerpt: A small description.
 
 date:   2017-02-01 17:57:12 -0500
 categories: design-strategize
 image_src: /assets/images/create/Quote_Empathy.png
 image_alt: Take Their Journey
+featured: true
 
 ---
 

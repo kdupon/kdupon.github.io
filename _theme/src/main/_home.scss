@@ -4,6 +4,14 @@
     line-height: 1.5;
   }
 
+  .view-all {
+    .btn {
+      @include media-breakpoint-up(md) {
+        min-width: 50%;
+      }
+    }
+  }
+
   .resume {
     background-color: #fff;
     padding-top: 3rem;
