@@ -35,6 +35,7 @@ We can all try to contribute to the best of our abilities. We can get outside of
 ### Where is a practical place to start?
 There are a few small things we can start with because, let’s face it, it’s hard to change our behaviors and it’s hard to remember the details sometimes.
 
+<div class="ml-5" markdown="1">
 **Listen.**<br>
 There is nothing better than giving whatever you are participating in your full attention. Take the time to care about where you are and learn everything you can.
 
