@@ -35,7 +35,7 @@ Encourage your team members to **find a rhythm** that works for them. Maybe they
 I try to talk to at least 3 to 5 customers a week; whether that is calling someone and having a quick “how’s it going” chat, sending an email, or scheduling a usability session. That’s what works for me, but building relationships is different for everyone.
 
 **Walk the Walk**<br>
-Empathy is a word we hear everywhere now, so sometimes the meaning gets lost. Encourage your teams not just to say they care about the user, but prove it. Making decisions based on conversations you have had with your customers is demonstrating that you care for their needs and desires. Challenge your team members to think about the user continuously and **never to forget why your business exists.** It exists because humans had a need and you are fulfilling their them.
+Empathy is a word we hear everywhere now, so sometimes the meaning gets lost. Encourage your teams not just to say they care about the user, but prove it. Making decisions based on conversations you have had with your customers is demonstrating that you care for their needs and desires. Challenge your team members to think about the user continuously and **never to forget why your business exists.** It exists because humans had a need and you are fulfilling the need.
 
 **Constantly Remember**<br>
 Sometimes we don’t have time to be connecting with users or it isn’t within our comfort zones, that’s okay! There are other ways to remember the user and their needs and desires.
